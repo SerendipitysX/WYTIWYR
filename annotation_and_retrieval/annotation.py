@@ -159,4 +159,4 @@ def predict2():
     print('Annotation Ok', result_dict)
     return result_dict
 
-app.run(host='10.30.11.33', port=7779, debug=True)
+app.run(host=args.ip, port=args.port1, debug=True)

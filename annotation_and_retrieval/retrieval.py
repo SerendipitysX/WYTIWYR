@@ -1,4 +1,7 @@
 import os
+import sys
+sys.path.append(os.path.dirname(os.getcwd()))
+print(os.path.dirname(os.getcwd()))
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 from utils.retrieval_utils import *
 from utils.bg_removel import bg_removal
@@ -7,6 +10,7 @@ from PIL import Image
 from flask import Flask, request
 from flask_cors import CORS
 import json
+from utils.arguments import args
 app = Flask(__name__)
 CORS(app)
 current_path = os.path.dirname(os.getcwd())
@@ -173,9 +177,9 @@ def predict():
         multi_modality_ftr = get_feature_multi_modal(query_img, query_text=user_prompt)
         intent_prompt_score = np.abs(similarity(all_ftrs - query_ftr.cpu().numpy(), multi_modality_ftr.squeeze(0).cpu()))
         if score_requisite!= []:
-            score = list(map(sum, zip(list(map(lambda item: item * 10, intent_prompt_score)), score_requisite)))
+            score = list(map(sum, zip(list(map(lambda item: item * args.mu, intent_prompt_score)), list(map(lambda item: item * args.nu, score_requisite)))))
         else:
-            score = list(map(lambda item: item * 10, intent_prompt_score))
+            score = list(map(lambda item: item * args.mu, intent_prompt_score))
         score_attr_final = [score_global * np.exp(score)]
         score_attr_final = np.array(score_attr_final)
         score_attr_final = np.squeeze(score_attr_final)
@@ -203,4 +207,4 @@ def predict():
     print('------------------------------- OK ----------------------------------------')
     return result_path
 
-app.run(host='10.30.11.33', port=7780, debug=True)
+app.run(host=args.ip, port=args.port2, debug=True)
