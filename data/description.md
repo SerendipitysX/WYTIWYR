@@ -1,5 +1,3 @@
-# description
-
 ## 🟨 The purpose of each file
 
 - `all.zip`  includes synthetic charts from [Beagle dataset](https://homes.cs.washington.edu/~leibatt/beagle.html) and real-world cases from the Internet, with a total of 18 chart types and 33,260 images.
