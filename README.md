@@ -1,12 +1,10 @@
-# readme
-
 # **WYTIWYR:** A User Intent-Aware Framework with Multi-modal Inputs for Visualization Retrieval
 
 This repository contains the code for a user intent-aware framework with multi-modal inputs for visualization retrieval, which consists of two stages: first, the Annotation stage disentangles the visual attributes within the query chart; and second, the Retrieval stage embeds the user’s intent with customized text prompt as well as bitmap query chart, to recall targeted retrieval result. 
 
-![figure/tmpB3B5.png](readme%203c2fcf0fdcd04c53970cf181a9d5f301/tmpB3B5.png)
+![figure/tmpB3B5.png](figure/tmpB3B5.png)
 
-![figure/tmpF7CB.png](readme%203c2fcf0fdcd04c53970cf181a9d5f301/tmpF7CB.png)
+![figure/tmpF7CB.png](figure/tmpF7CB.png)
 
 ## **Dependencies and Installation**
 
@@ -60,9 +58,9 @@ python retrieval.py --ip 'localhost' --port 7780 --mu 5 --nu 1
 
 To show users can customize retrieval inputs based on disentangled attributes of the query chart and intent prompt, we explore two main use scenarios including design space extension by explicit goals and fuzzy retrieval by user intent. For design space extension by explicit goals, we Investigated 4 cases, namely (a) original attribute change, (b) new attribute addition, (c) existing attribute deletion, (d) attribute transfer, see the left figure below for detail. For fuzzy retrieval by user intent, we Investigated 3 cases, namely (a) text information seeking, (b) relevant topic finding, (c) abstract description searching, see the left figure below for detail
 
-![figure/tmp1FB9.png](readme%203c2fcf0fdcd04c53970cf181a9d5f301/tmp1FB9.png)
+![figure/tmp1FB9.png](figure/tmp1FB9.png)
 
-![figure/tmp3611.png](readme%203c2fcf0fdcd04c53970cf181a9d5f301/tmp3611.png)
+![figure/tmp3611.png](figure/tmp3611.png)
 
 ## Failure Cases
 
