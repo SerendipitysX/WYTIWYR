@@ -11,7 +11,7 @@ This repository contains the code for a user intent-aware framework with multi-m
 ```bash
 gitclone https://github.com/SerendipitysX/WYTIWYR.git
 cd WYTIWYR
-****conda create --name <environment_name> --file requirements.txt
+conda create --name <environment_name> --file requirements.txt
 ```
 
 ## **Dataset Preparation**
@@ -56,10 +56,10 @@ python retrieval.py --ip 'localhost' --port 7780 --mu 5 --nu 1
 
 ## Cases
 
-To show users can customize retrieval inputs based on disentangled attributes of the query chart and intent prompt, we explore two main use scenarios including design space extension by explicit goals and fuzzy retrieval by user intent. For design space extension by explicit goals, we Investigated 4 cases, namely (a) original attribute change, (b) new attribute addition, (c) existing attribute deletion, (d) attribute transfer, see the left figure below for detail. For fuzzy retrieval by user intent, we Investigated 3 cases, namely (a) text information seeking, (b) relevant topic finding, (c) abstract description searching, see the left figure below for detail
-
+To show users can customize retrieval inputs based on disentangled attributes of the query chart and intent prompt, we explore two main use scenarios including design space extension by explicit goals and fuzzy retrieval by user intent. For design space extension by explicit goals, we Investigated 4 cases, namely (a) original attribute change, (b) new attribute addition, (c) existing attribute deletion, (d) attribute transfer, see the figure below for detail. 
 ![figure/tmp1FB9.png](figure/tmp1FB9.png)
 
+For fuzzy retrieval by user intent, we Investigated 3 cases, namely (a) text information seeking, (b) relevant topic finding, (c) abstract description searching, see the figure below for detail.
 ![figure/tmp3611.png](figure/tmp3611.png)
 
 ## Failure Cases
