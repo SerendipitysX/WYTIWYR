@@ -6,10 +6,12 @@ This repository contains the code for a user intent-aware framework with multi-m
 
 ![figure/tmpF7CB.png](figure/tmpF7CB.png)
 
+The detail of the framework can be referred to the original paper and it would update after it is published, 
+
 ## **Dependencies and Installation**
 
 ```bash
-gitclone https://github.com/SerendipitysX/WYTIWYR.git
+git clone https://github.com/SerendipitysX/WYTIWYR.git
 cd WYTIWYR
 conda create --name <environment_name> --file requirements.txt
 ```
