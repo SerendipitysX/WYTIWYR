@@ -109,8 +109,6 @@ To show users can customize retrieval inputs based on disentangled attributes of
 For fuzzy retrieval by user intent, we Investigated 3 cases, namely (a) text information seeking, (b) relevant topic finding, (c) abstract description searching, see the figure below for detail.
 ![figure/tmp3611.png](figure/tmp3611.png)
 
-## Failure Cases
-
 ## **Contact**
 
 We are glad to hear from you. If you have any questions, please feel free to contact [xrakexss@gmail.com](mailto:xrakexss@gmail.com) or open issues on this repository.
