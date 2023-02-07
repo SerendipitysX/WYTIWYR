@@ -6,10 +6,12 @@ This repository contains the code for a user intent-aware framework with multi-m
 
 ![figure/tmpF7CB.png](figure/tmpF7CB.png)
 
+The detail of the framework can be referred to the original paper and it would update after it is published.         
+
 ## **Dependencies and Installation**
 
 ```bash
-gitclone https://github.com/SerendipitysX/WYTIWYR.git
+git clone https://github.com/SerendipitysX/WYTIWYR.git
 cd WYTIWYR
 conda create --name <environment_name> --file requirements.txt
 ```
@@ -53,6 +55,51 @@ python retrieval.py --ip 'localhost' --port2 7780 --mu 5 --nu 1
 ```
 
 ## Frontend Setup
+
+### Environment Setup
+
+1.  Set up Node.js and  environment. Please refer to [here](https://www.digitalocean.com/community/tutorials/node-js-environment-setup-node-js-installation)
+2.  Set up Vue.js environment:  `npm install vue`
+
+### Host Setting
+
+In file `WYTIWYR\frontend\retrieval\src\store\index.ts`, please set the host that run your backend
+
+```js
+import Vue from "vue";
+import Vuex from "vuex";
+
+Vue.use(Vuex);
+
+export default new Vuex.Store({
+  state: {
+    watchlst: ["all_attributes.Type"],
+    annotation_host: "http://10.30.11.33:7779/", // change to your own hosts
+    retrieval_host: "http://10.30.11.33:7780/",
+...
+```
+
+### Project Setup
+
+1. Go to `WYTIWYR\frontend\retrieval` path
+
+2. Install all the needed packages through npm
+
+   ```
+   npm install
+   ```
+
+3. Compiles and hot-reloads for development
+
+   ```
+   npm run serve
+   ```
+
+#### Compiles and minifies for production
+
+```
+npm run build
+```
 
 ## Cases
 
