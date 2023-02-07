@@ -45,13 +45,13 @@ $$
 To run annotation, 
 
 ```bash
-python annotation.py --ip 'localhost' --port1 7779
+python annotation_and_retrieval/annotation.py --ip 'localhost' --port1 7779
 ```
 
 To run retrieval,
 
 ```bash
-python retrieval.py --ip 'localhost' --port2 7780 --mu 5 --nu 1 
+python annotation_and_retrieval/retrieval.py --ip 'localhost' --port2 7780 --mu 5 --nu 1 
 ```
 
 ## Frontend Setup
