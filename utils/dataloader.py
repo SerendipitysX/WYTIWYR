@@ -4,7 +4,7 @@ from torch.utils import data
 from torch.utils.data.sampler import SubsetRandomSampler
 from torchvision import transforms
 import os
-from utils.arguments import args
+from arguments import args
 import numpy as np
 import pandas as pd
 import warnings

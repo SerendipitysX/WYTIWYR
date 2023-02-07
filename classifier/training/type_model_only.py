@@ -3,10 +3,16 @@ import torch.nn as nn
 import random
 import tqdm
 import torch.optim as optim
+import sys
+import os
+current_path = os.path.dirname(os.getcwd())
+print(current_path)
+sys.path.append(current_path + '/utils')
+sys.path.append(current_path + '/classifier')
 from utils.dataloader import *
-from torch.utils.tensorboard import SummaryWriter
 from utils.loss import FocalLoss
-from finetune.model import get_model
+from torch.utils.tensorboard import SummaryWriter
+from backbone import get_model
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 layout = {

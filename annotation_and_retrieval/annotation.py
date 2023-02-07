@@ -1,10 +1,15 @@
 from transformers import CLIPProcessor, CLIPModel
-from utils.dataloader import *
-from classifier.backbone import get_model
+import sys
+import os
+current_path = os.path.dirname(os.getcwd())
+print(current_path)
+sys.path.append(current_path + '/utils')
+sys.path.append(current_path + '/classifier')
+from dataloader import *
+from backbone import get_model
 from flask import Flask, request
 from flask_cors import CORS
 from PIL import Image
-current_path = os.path.dirname(os.getcwd())
 
 app = Flask(__name__)
 CORS(app)

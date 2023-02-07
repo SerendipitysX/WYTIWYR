@@ -1,19 +1,19 @@
-import os
 import sys
-sys.path.append(os.path.dirname(os.getcwd()))
-print(os.path.dirname(os.getcwd()))
+import os
+current_path = os.path.dirname(os.getcwd())
+print(current_path)
+sys.path.append(current_path + '/utils')
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
-from utils.retrieval_utils import *
-from utils.bg_removel import bg_removal
-from utils.color_histogram import extract_color_hist
+from retrieval_utils import *
+from bg_removel import bg_removal
+from color_histogram import extract_color_hist
 from PIL import Image
 from flask import Flask, request
 from flask_cors import CORS
 import json
-from utils.arguments import args
+from arguments import args
 app = Flask(__name__)
 CORS(app)
-current_path = os.path.dirname(os.getcwd())
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 

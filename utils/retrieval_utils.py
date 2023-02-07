@@ -2,13 +2,17 @@ import os
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 import json
 import tqdm
-from clip.model import CLIP
-from clip.clip import tokenize
-from transformers import CLIPProcessor, CLIPModel
-from utils.dataloader import *
-from classifier.backbone import get_model
-from tqdm import tqdm
+import sys
 current_path = os.path.dirname(os.getcwd())
+sys.path.append(current_path + '/utils')
+sys.path.append(current_path + '/clip')
+sys.path.append(current_path + '/classifier')
+from model import CLIP
+from clip import tokenize
+from transformers import CLIPProcessor, CLIPModel
+from dataloader import *
+from backbone import get_model
+from tqdm import tqdm
 
 print(os.environ["CUDA_VISIBLE_DEVICES"])
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')

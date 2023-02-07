@@ -4,9 +4,12 @@ import torch
 from torchvision import transforms
 import torch.nn.functional as F
 from torchvision.transforms.functional import normalize
-from utils.bg_removel_model import ISNetDIS
-import warnings
+import sys
 import os
+current_path = os.path.dirname(os.getcwd())
+sys.path.append(current_path + '/utils')
+from bg_removel_model import ISNetDIS
+import warnings
 warnings.filterwarnings("ignore")
 current_path = os.path.dirname(os.getcwd())
 
