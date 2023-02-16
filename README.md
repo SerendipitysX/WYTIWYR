@@ -36,7 +36,7 @@ To use these models, please follow the steps below:
 
 ## Backend Setup
 
-Following WYTIWYR framework, there are two stage namely *Annotation* and *Retrieval*. Before settng up these two file, make sure the ip adress and port right. Also the You can specify paramenter $\nu$ and $\mu$ to adjust the weight of attribute and user prompt as descripted in paper.
+Following WYTIWYR framework, there are two stage namely *Annotation* and *Retrieval*. Before settng up these two file, make sure the ip adress and port right. Also the you can specify paramenter $\nu$ and $\mu$ to adjust the weight of attribute and user prompt as descripted in paper.
 
 $$
 \mathcal{S} = S_{\mathcal{Q}} \cdot \text{e}^{\nu  S_{\mathcal{I}_A} +\mu  S_{\mathcal{M}}}
@@ -63,7 +63,7 @@ python annotation_and_retrieval/retrieval.py --ip 'localhost' --port2 7780 --mu 
 
 ### Host Setting
 
-In file `WYTIWYR\frontend\retrieval\src\store\index.ts`, please set the host that run your backend
+In file `WYTIWYR/frontend/retrieval/src/store/index.ts`, please set the host that run your backend.
 
 ```js
 import Vue from "vue";
@@ -81,7 +81,7 @@ export default new Vuex.Store({
 
 ### Project Setup
 
-1. Go to `WYTIWYR\frontend\retrieval` path
+1. Go to `WYTIWYR/frontend/retrieval` path
 
 2. Install all the needed packages through npm
 
