@@ -112,3 +112,6 @@ For fuzzy retrieval by user intent, we Investigated 3 cases, namely (a) text inf
 ## **Contact**
 
 We are glad to hear from you. If you have any questions, please feel free to contact [xrakexss@gmail.com](mailto:xrakexss@gmail.com) or open issues on this repository.
+
+## License
+This project is open sourced under GNU Affero General Public License v3.0.
