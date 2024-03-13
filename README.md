@@ -31,7 +31,8 @@ In this work, we benefit from some excellent pretrained models, including [CLIP]
 
 To use these models, please follow the steps below:
 
-1. Download the pretrained models from [here](https://drive.google.com/drive/folders/1o-VFpRX7wmBgeVXQ75lAOOoj5bLh8s5Y?usp=share_link).
+1. Download the background removal model from [here](https://drive.google.com/file/d/1XHIzgTzY5BQHw140EDIgwIb53K659ENH/view) and CLIP model from [here](https://openaipublic.azureedge.net/clip/models/5806e77cd80f8b59890b7e101eabd078d9fb84e6937f9e85e4ecb61988df416f/ViT-B-16.pt))
+2. Download the pretrained classification models from [here](https://drive.google.com/drive/folders/1o-VFpRX7wmBgeVXQ75lAOOoj5bLh8s5Y?usp=share_link).
 2. Unzip the folder and save it to `models/`.
 
 ## Backend Setup
